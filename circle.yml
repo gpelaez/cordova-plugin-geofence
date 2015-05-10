@@ -2,13 +2,9 @@ machine:
   environment:
     ANDROID_NDK_HOME: $ANDROID_NDK
     NODE_ENV: test
-    PATH: $PATH:./node_modules/.bin
+    PATH: $PATH:~/$CIRCLE_PROJECT_REPONAME/node_modules/.bin
 dependencies:
   override:
-    - npm uninstall -g cordova
-    - npm uninstall -g cordova-paramedic
-    - npm prune --production
-    - ls -a
     - npm install
 test:
   pre:
