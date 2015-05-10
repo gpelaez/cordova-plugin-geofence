@@ -5,6 +5,7 @@ machine:
     PATH: $PATH:./node_modules/.bin
 dependencies:
   override:
+    - npm prune --production
     - ls -a
     - npm install
 test:
