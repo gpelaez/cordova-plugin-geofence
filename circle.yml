@@ -5,6 +5,8 @@ machine:
     PATH: $PATH:./node_modules/.bin
 dependencies:
   override:
+    - npm uninstall -g cordova
+    - npm uninstall -g cordova-paramedic
     - npm prune --production
     - ls -a
     - npm install
